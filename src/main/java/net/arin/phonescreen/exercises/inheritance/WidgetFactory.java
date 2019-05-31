@@ -1,23 +1,26 @@
 package net.arin.phonescreen.exercises.inheritance;
 
+import net.arin.phonescreen.doNotModify.inheritance.AbstractWidget;
 import net.arin.phonescreen.doNotModify.inheritance.CompositeWidget;
+import net.arin.phonescreen.doNotModify.inheritance.CountryOfOrigin;
+import net.arin.phonescreen.doNotModify.inheritance.Widget;
+
+import java.util.List;
 
 public class WidgetFactory {
    private WidgetFactory(){}
 
-   /*
-      TODO: Exercise 2:
-      Construct and return a NorthAmericanAndEuropeanWidget using classes in this package.
-    */
    public static CompositeWidget getNorthAmericanAndEuropeanWidget(){
-      return null;
+      final CompositeWidget compositeWidget = new NorthAmericanAndEuropeanWidget();
+      compositeWidget.getComponents().add(new CanadianWidget());
+      compositeWidget.getComponents().add(new GermanWidget());
+      return compositeWidget;
    }
 
-   /*
-      TODO: Exercise 2:
-      Construct and return an AsianAndNorthAmericanWidget using classes in this package.
-    */
    public static CompositeWidget getAsianAndNorthAmericanWidget(){
-      return null;
+      final CompositeWidget compositeWidget = new AsianAndNorthAmericanWidget();
+      compositeWidget.getComponents().add(new JapaneseWidget());
+      compositeWidget.getComponents().add(new CanadianWidget());
+      return compositeWidget;
    }
 }

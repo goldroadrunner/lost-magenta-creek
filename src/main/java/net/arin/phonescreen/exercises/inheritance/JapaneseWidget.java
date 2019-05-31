@@ -1,10 +1,12 @@
 package net.arin.phonescreen.exercises.inheritance;
 
+import net.arin.phonescreen.doNotModify.inheritance.AbstractWidget;
+import net.arin.phonescreen.doNotModify.inheritance.CountryOfOrigin;
 import net.arin.phonescreen.doNotModify.inheritance.Widget;
 
-/*
-   TODO: Exercise 2:
-   Remove the "abstract". Extend appropriate Abstract class so you have to implement fewer methods.
- */
-public abstract class JapaneseWidget /* extends ??? */ implements Widget {
+public class JapaneseWidget extends AbstractWidget implements Widget {
+    @Override
+    public CountryOfOrigin getCountryOfOrigin(){
+        return CountryOfOrigin.JAPAN;
+    }
 }
