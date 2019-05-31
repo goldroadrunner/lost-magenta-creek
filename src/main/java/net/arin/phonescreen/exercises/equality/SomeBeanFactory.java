@@ -7,9 +7,12 @@ public class SomeBeanFactory {
    private SomeBeanFactory(){}
 
    public static Pair<SomeBean, SomeBean> getBeansForEqualityShenanigans(){
-      //TODO: Exercise 1:
-      // Throw the following line away and replace it with some code that makes the
-      // tests in SomeBeanEqualityShenanigansTest pass
-      return new Pair<SomeBean, SomeBean>(null, null);
+      final SomeBean firstBean = new SomeBean();
+      firstBean.setPropertyA(new String(""));
+      firstBean.setPropertyB(127);
+      final SomeBean secondBean = new SomeBean();
+      secondBean.setPropertyA(new String(""));
+      secondBean.setPropertyB(127);
+      return new Pair<SomeBean, SomeBean>(firstBean, secondBean);
    }
 }
