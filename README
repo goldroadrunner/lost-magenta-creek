@@ -21,3 +21,13 @@ mvn clean test
 You'll need an internet connection the first time so that maven can download dependencies.
 
 You'll also need Java 1.6 or better to run this code. I believe it will work with a small change on Java 1.5. Bonus points if you can tell me what that change is.
+
+<h2> Emory Comments </h2>
+It worked for me on java 15. but not java 1.4.
+The reason it did not work on java 1.4 is this project uses a bunch of annotations that were introduced in 1.5.
+
+I think (but did not verify):
+<ol>
+  <li> We could remove those annotations and it would work on java 1.4.
+  <li> Using the annotations is following best code practices but is not strictly necessary for the code to work.
+</ol>
